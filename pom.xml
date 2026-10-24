@@ -20,7 +20,9 @@
 
     <!-- This repository's own versions: bump them here. CI publishes a new version on the next push to master. -->
     <properties>
-        <pack-module.version>1.1.0</pack-module.version>
+        <modules-wrapper.version>1.9.0</modules-wrapper.version>
+        <rainscore.version>2.4.0</rainscore.version>
+        <pack-module.version>1.2.0</pack-module.version>
     </properties>
 
     <modules>

@@ -1,0 +1,36 @@
+id: serverpack
+title: The server resource pack
+summary: The resource pack this server sends you — what it is for, and what to do if it won't load.
+intro: |
+  When you joined, your game asked whether to download a resource pack. That was me, politely arranging custom sounds and models. Here is what to do about it.
+icon: PAINTING
+category: Looks & cosmetics
+order: 90
+module: serverpack
+when: serverpack:url
+aliases: [resourcepack, resource-pack, texturepack, texture-pack, pack, textures]
+keywords: [download, accept, decline, models, sounds, kicked, disconnected, missing]
+sections:
+  - question: What is the server pack?
+    title: What it is
+    text: |
+      A resource pack with the custom sounds and models this server uses, hosted on a web server and sent to your game when you join. Your game downloads it once and keeps it: the pack is identified by its checksum, so it is only downloaded again when it actually changes.
+  - question: Do I have to accept it?
+    title: Required or not
+    text: |
+      {if:serverpack:required}<red>Yes.</red> The pack is required: if you decline the download, you are disconnected. Accept it, and you are in.{else}No. It is optional — decline and you can still play, but custom models and sounds will be missing or look wrong.{/if}
+  - question: The download failed. What now?
+    title: Download problems
+    text: |
+      <white>•</white> Rejoin: the pack is offered again every time you join.
+      <white>•</white> Check your connection, a VPN or a firewall — the pack comes from a different address than the game server.
+      <white>•</white> Make sure <white>Server Resource Packs</white> is not set to <i>Disabled</i> for this server in the multiplayer menu (Edit server).
+      {if:serverpack:required}As the pack is required, a failed download keeps you out. That is intentional, if annoying; fix the cause and rejoin.{/if}
+  - question: Something looks wrong or missing
+    title: Missing models and sounds
+    text: |
+      Open the game's resource pack screen and check that the server pack is active and on top of any pack of your own: a pack of yours that is loaded <i>above</i> it can override its models. The simplest test is to disable your own packs and rejoin.
+  - question: Why does it download every time?
+    title: Repeated downloads
+    text: |
+      It should not — your game keeps the pack and only fetches it again when it changes. If it keeps doing so, your game's cache may be getting cleared (some launchers and cleaners do that), or the pack was updated.

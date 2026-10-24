@@ -31,7 +31,7 @@
           comments those lines out; the pack itself is unchanged and clients keep the copy they already have,
           because it is still the same file at the same URL with the same hash.
              1.1.0: Paper 26.3 natively (paper-api 26.3, api-version 26.3); no longer loads on 26.2. -->
-        <plugin.version>1.1.0</plugin.version>
+        <plugin.version>1.2.0</plugin.version>
     </properties>
 
     <dependencies>
